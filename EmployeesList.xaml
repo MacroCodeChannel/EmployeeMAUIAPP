@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viemodels ="clr-namespace:EmployeeApp.ViewModels"
+             x:Class="EmployeeApp.EmployeesList"
+             Title="Employees List">
+    <StackLayout Margin="15">
+        <Label  Text="Employees List" FontSize="30"/>
+        <Button Text="Add Employee" Command="{Binding AddUpdateEmployeeCommand}" HorizontalOptions="EndAndExpand"/>
+
+        <CollectionView ItemsSource="{Binding Employees}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="10" Padding="10">
+                        <StackLayout >
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="{Binding FirstName}" FontSize="10" FontAttributes="Bold"/>
+                                <Label Text="{Binding MiddleName}" FontSize="10" FontAttributes="Bold"/>
+                                <Label Text="{Binding LastName}" FontSize="10" FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding EmailAddress}" FontSize="10" FontAttributes="Bold"/>
+                            <Label Text="{Binding DateOfBirth}" FontSize="10" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viemodels:EmployeesViewModel}},Path=DisplayActionCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    
+    </StackLayout>
+</ContentPage>

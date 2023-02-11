@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.AddEmployee"
+             Title="Add / Update Employee">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="TextColor" Value="SlateGray"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <VerticalStackLayout>
+            <Label Text="First Name" FontSize="16"/>
+            <Entry Text="{Binding EmployeeDetails.FirstName}" Placeholder="First Name"/>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout>
+            <Label Text="Middle Name" FontSize="16"/>
+            <Entry Text="{Binding EmployeeDetails.MiddleName}" Placeholder="Middle Name"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Last Name" FontSize="16"/>
+            <Entry Text="{Binding EmployeeDetails.LastName}" Placeholder="Last Name"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Email Address" FontSize="16"/>
+            <Entry Text="{Binding EmployeeDetails.EmilAddress}" Placeholder="Email Address"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Date of Birth" FontSize="16"/>
+            <DatePicker Date="{Binding EmployeeDetails.DateOfBirth}" />
+        </VerticalStackLayout>
+
+
+        <Button Command="{Binding AddEmployeeCommand}" Text="Save Employee Details"/>
+    </StackLayout>
+</ContentPage>
