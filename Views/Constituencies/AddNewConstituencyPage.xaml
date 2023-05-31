@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Constituencies.AddNewConstituencyPage"
+             Title="Add New Constituency">
+    <StackLayout Margin="10">
+        <VerticalStackLayout>
+            <Label Text="Country Name" FontSize="16"/>
+            <Picker
+              x:Name="Countries"
+              ItemsSource="{Binding CountriesList,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedCountry,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select Country">
+            </Picker>
+                
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout>
+            <Label Text="Constituency Code" FontSize="16"/>
+            <Entry Text="{Binding ConstituencyDetails.Code}" Placeholder="Constituency Code"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Constituency Name" FontSize="16"/>
+            <Entry Text="{Binding ConstituencyDetails.Name}" Placeholder="Constituency Name"/>
+        </VerticalStackLayout>
+        <Button Command="{Binding AddNewConstituencyCommand}" Text="Save Constituency"/>
+    </StackLayout>
+</ContentPage>

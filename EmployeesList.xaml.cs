@@ -2,21 +2,30 @@ using EmployeeApp.ViewModels;
 
 namespace EmployeeApp;
 
+
 public partial class EmployeesList : ContentPage
 {
 	public EmployeesViewModel _viemodel;
     public EmployeesList(EmployeesViewModel viewModel)
 	{
 		InitializeComponent();
-        _viemodel=viewModel;
-        this.BindingContext = viewModel;
+       
+        this.BindingContext = _viemodel = viewModel;
 	}
 
-	protected override void OnAppearing()
-	{
-		base.OnAppearing();
-		{
-			_viemodel.GetEmployeesListCommand.Execute(null);
-		}
-	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is EmployeesViewModel bindingContext)
+        {
+            bindingContext.OnAppearing();
+            _viemodel.LoadEmployees();
+        }
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        _viemodel.Employees.Clear();
+    }
 }

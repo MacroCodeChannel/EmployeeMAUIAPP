@@ -4,11 +4,108 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:EmployeeApp"
-    Shell.FlyoutBehavior="Disabled">
-    
- <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" /> 
+    xmlns:country="clr-namespace:EmployeeApp.Views.Country"
+    xmlns:constituency="clr-namespace:EmployeeApp.Views.Constituencies"
+    xmlns:locations="clr-namespace:EmployeeApp.Views.Locations"
+    xmlns:subloc="clr-namespace:EmployeeApp.Views.SubLocations"
+    xmlns:village="clr-namespace:EmployeeApp.Views.Village" >
 
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid
+                x:Name="Header"
+                Margin="0"
+                Padding="20"
+                BackgroundColor="{StaticResource White}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image
+                    x:Name="Logo"
+                    Grid.Row="0"
+                    Margin="0"
+                    Source="dotnet_bot.svg"/>
+                <Label
+                    x:Name="AppName"
+                    Grid.Row="1"
+                    Margin="0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="End"
+                    Text="Macro Code App"
+                    TextColor="{StaticResource NavigationBar}"/>
+
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    
+    
+    <FlyoutItem
+        x:Name="Home"
+        Icon="employees.png"
+        Title="Employees List">
+        <ShellContent
+        Title="Home"
+        Icon="employees.png"
+        ContentTemplate="{DataTemplate local:EmployeesList}"
+        Route="EmployeesList" />
+    </FlyoutItem>
+
+
+    <FlyoutItem
+        x:Name="Country"   
+        Icon="country.png"
+        Title="Countries List">
+        <ShellContent
+        Title="County List"
+        Icon="country.png"
+        ContentTemplate="{DataTemplate country:CountriesList}"
+        Route="CountriesList" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="Constituency"
+        Icon="list.png"
+        Title="Constituency List">
+        <ShellContent
+        Title="Constituency Lst"
+        Icon="list.png"
+        ContentTemplate="{DataTemplate constituency:ConstituencyList}"
+        Route="ConstituencyList" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="Location"
+        Icon="location.png"
+        Title="Locations List">
+        <ShellContent
+        Title="Locations List"
+        Icon="location.png"
+        ContentTemplate="{DataTemplate locations:LocationsList}"
+        Route="LocationsList" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="SubLocation"
+        Icon="list.png"
+        Title="Sublocations List">
+        <ShellContent
+        Title="Sublocations List"
+        Icon="list.png"
+        ContentTemplate="{DataTemplate subloc:SubLocationsList}"
+        Route="SubLocationsList" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="Villages"
+        Icon="list.png"
+        Title="Villages List">
+        <ShellContent
+        Title="Villages"
+        Icon="list.png"
+        ContentTemplate="{DataTemplate village:VillageList}"
+        Route="VillageList" />
+    </FlyoutItem>
 </Shell>

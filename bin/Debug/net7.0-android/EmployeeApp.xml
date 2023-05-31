@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeeApp</name>
+    </assembly>
+    <members>
+        <member name="F:EmployeeApp.ViewModels.AddEmployeeViewModel.deleteEmployeeRecordCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddEmployeeViewModel.DeleteEmployeeRecordCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddEmployeeViewModel.DeleteEmployeeRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddEmployeeViewModel.DeleteEmployeeRecord"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddEmployeeViewModel.addEmployeeCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddEmployeeViewModel.AddEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddEmployeeViewModel.AddEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddEmployeeViewModel.AddEmployee"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddNewConstituencyPageViewModel.addNewConstituencyCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddNewConstituencyPageViewModel.AddNewConstituencyCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddNewConstituencyPageViewModel.AddNewConstituencyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddNewConstituencyPageViewModel.AddNewConstituency"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddNewCountryPageViewModel.addNewCountryCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddNewCountryPageViewModel.AddNewCountryCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddNewCountryPageViewModel.AddNewCountryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddNewCountryPageViewModel.AddNewCountry"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddNewLocationPageViewModel.addNewLocationsCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddNewLocationPageViewModel.AddNewLocationsCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddNewLocationPageViewModel.AddNewLocationsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddNewLocationPageViewModel.AddNewLocations"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddNewSubLocationPageViewModel.addNewSubLocationsCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddNewSubLocationPageViewModel.AddNewSubLocationsCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddNewSubLocationPageViewModel.AddNewSubLocationsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddNewSubLocationPageViewModel.AddNewSubLocations"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.AddNewVillagePageViewModel.addNewVillageCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.AddNewVillagePageViewModel.AddNewVillageCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.AddNewVillagePageViewModel.AddNewVillageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.AddNewVillagePageViewModel.AddNewVillage"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.ConstituencyListViewModel.addNewConstituencyCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.ConstituencyListViewModel.AddNewConstituencyCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.ConstituencyListViewModel.AddNewConstituencyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.ConstituencyListViewModel.AddNewConstituency"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.CountriesListViewModel.addNewCountryCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.CountriesListViewModel.AddNewCountryCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.CountriesListViewModel.AddNewCountryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.CountriesListViewModel.AddNewCountry"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.EmployeesViewModel.addUpdateEmployeeCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.EmployeesViewModel.AddUpdateEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.EmployeesViewModel.AddUpdateEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.EmployeesViewModel.AddUpdateEmployee"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.LocationsListViewModel.addNewLocationCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.LocationsListViewModel.AddNewLocationCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.LocationsListViewModel.AddNewLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.LocationsListViewModel.AddNewLocation"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.SubLocationListViewModel.addNewSubLocationCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.SubLocationListViewModel.AddNewSubLocationCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.SubLocationListViewModel.AddNewSubLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.SubLocationListViewModel.AddNewSubLocation"/>.</summary>
+        </member>
+        <member name="F:EmployeeApp.ViewModels.VillagesListViewModel.addNewVillageCommand">
+            <summary>The backing field for <see cref="P:EmployeeApp.ViewModels.VillagesListViewModel.AddNewVillageCommand"/>.</summary>
+        </member>
+        <member name="P:EmployeeApp.ViewModels.VillagesListViewModel.AddNewVillageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:EmployeeApp.ViewModels.VillagesListViewModel.AddNewVillage"/>.</summary>
+        </member>
+    </members>
+</doc>

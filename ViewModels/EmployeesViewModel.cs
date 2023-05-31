@@ -1,32 +1,70 @@
-﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EmployeeApp.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using EmployeeApp.DbContext;
 using EmployeeApp.Services;
+using MvvmHelpers;
 
 namespace EmployeeApp.ViewModels
 {
-    public partial class EmployeesViewModel : ObservableObject
+    public partial class EmployeesViewModel : LocalBaseViewModel
     {
-        public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
-       
-        public readonly IEmployeeService _employeeService;
-        public EmployeesViewModel(IEmployeeService employeeService)
+        public ObservableRangeCollection<Employee> Employees { get; set; } = new ObservableRangeCollection<Employee>();
+        public EmployeesViewModel()
         {
-            _employeeService = employeeService;
+            LoadEmployees();
         }
 
 
-        [ICommand]
-        public async  void GetEmployeesList()
+        private Employee selectedEmployee;
+
+        public Employee SelectedEmployee
+        {
+            get { return selectedEmployee; }
+            set
+            {
+                selectedEmployee = value;
+                OnPropertyChanged();
+                if(selectedEmployee == null)
+                {
+                    return;
+                }
+                OnSelectedEmployee(value);
+
+            }
+        }
+
+        private async void OnSelectedEmployee(Employee employee)
+        {
+            try
+            {
+                if(employee == null)
+                {
+                    return;
+                }
+                else
+                {
+                    await Shell.Current.GoToAsync($"{nameof(AddEmployee)}?{nameof(AddEmployee.EmployeeId)}={employee.Id}");
+                }
+
+            }catch(Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error Occured", "Something went wrong while selecting the employee" + ex.Message, "OK");
+            }
+        }
+
+
+
+
+        public  void LoadEmployees()
         {
 
-            var employees = await _employeeService.GetEmployeesList();
+            var employees = App.Database.GetTableRows<Employee>("Employee").ToList();
             if(employees?.Count > 0)
             {
                 Employees.Clear();
@@ -38,35 +76,12 @@ namespace EmployeeApp.ViewModels
 
         }
 
-        [ICommand]
+        [RelayCommand]
         public async void AddUpdateEmployee()
         {
             await AppShell.Current.GoToAsync(nameof(AddEmployee));
         }
 
 
-        [ICommand]
-        public async void DisplayAction(Employee employee)
-        {
-            var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete");
-
-            if (response == "Edit")
-            {
-                var navparam = new Dictionary<string, object>();
-                navparam.Add("AddEmployee", employee);
-
-                await AppShell.Current.GoToAsync(nameof(AddEmployee), navparam);
-            }
-            if (response == "Delete")
-            {
-                var deletresponse = await _employeeService.DeleteEmployee(employee);
-
-                if (deletresponse > 0)
-                {
-                    GetEmployeesList();
-                }
-            }
-
-        }
     }
 }

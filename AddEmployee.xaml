@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmployeeApp.AddEmployee"
+             
              Title="Add / Update Employee">
 
     <ContentPage.Resources>
@@ -12,34 +13,98 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <StackLayout Margin="10">
-        <VerticalStackLayout>
+    <ScrollView Margin="10">
+        <VerticalStackLayout Margin="8,0,0,8">
+            <Label Text="Country Name" FontSize="16"/>
+            <Picker
+              x:Name="Countries"
+              ItemsSource="{Binding LoadCountries,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedCountry,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select Country">
+            </Picker>
+
+            <Label Text="Constituency Name" FontSize="16"/>
+            <Picker
+              x:Name="Constituencies"
+              ItemsSource="{Binding LoadConstituencies,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedConstituency,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select Constituency">
+            </Picker>
+
+            <Label Text="Location Name" FontSize="16"/>
+            <Picker
+              x:Name="Locations"
+              ItemsSource="{Binding LoadLocations,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedLocation,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding LocationName}"
+              Title="Select Location">
+            </Picker>
+
+            <Label Text="SubLocation Name" FontSize="16"/>
+            <Picker
+              x:Name="SubLocation"
+              ItemsSource="{Binding LoadSubLocation,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedSubLocation,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select SubLocation">
+            </Picker>
+
+            <Label Text="Village Name" FontSize="16"/>
+            <Picker
+              x:Name="Village"
+              ItemsSource="{Binding LoadVillages,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedVillage,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select Village">
+            </Picker>
+
             <Label Text="First Name" FontSize="16"/>
             <Entry Text="{Binding EmployeeDetails.FirstName}" Placeholder="First Name"/>
-        </VerticalStackLayout>
 
-
-        <VerticalStackLayout>
             <Label Text="Middle Name" FontSize="16"/>
             <Entry Text="{Binding EmployeeDetails.MiddleName}" Placeholder="Middle Name"/>
-        </VerticalStackLayout>
 
-        <VerticalStackLayout>
+
+
             <Label Text="Last Name" FontSize="16"/>
             <Entry Text="{Binding EmployeeDetails.LastName}" Placeholder="Last Name"/>
-        </VerticalStackLayout>
 
-        <VerticalStackLayout>
             <Label Text="Email Address" FontSize="16"/>
-            <Entry Text="{Binding EmployeeDetails.EmilAddress}" Placeholder="Email Address"/>
-        </VerticalStackLayout>
+            <Entry Text="{Binding EmployeeDetails.EmailAddress}" Placeholder="Email Address"/>
 
-        <VerticalStackLayout>
             <Label Text="Date of Birth" FontSize="16"/>
             <DatePicker Date="{Binding EmployeeDetails.DateOfBirth}" />
+
+            <StackLayout>
+                <Button x:Name="TakePhoto"
+                        BackgroundColor="{StaticResource PrimaryBrush}"
+                        Command="{Binding CaptureEmployeePhotoCommand}"
+                        Text="Capture Employee Photo"
+                        TextColor="{StaticResource White}"/>
+
+                <Image 
+                    x:Name="TakeEmpPhoto"
+                    Source="{Binding CompleteEmployeePhotoPath,Mode=TwoWay}" 
+                    IsVisible="{Binding HasPhoto}"
+                    HeightRequest="450" 
+                    VerticalOptions="FillAndExpand"/>
+
+            </StackLayout>
+
+
+
+            <ActivityIndicator HeightRequest="50" WidthRequest="50" IsRunning="{Binding IsRunning}" IsVisible="{Binding IsRunning}"></ActivityIndicator>
+            <StackLayout>
+
+                <Button Margin="10,10,10,10" CornerRadius="20" BackgroundColor="{StaticResource NavigationBar}" Command="{Binding AddEmployeeCommand}" Text="Save Employee Details"/>
+
+            </StackLayout>
+            <StackLayout>
+                <Button Margin="10,10,10,10" CornerRadius="20" Command="{Binding DeleteEmployeeRecordCommand}" BackgroundColor="{StaticResource EmployeeRed}" Text="Delete Employee"/>
+
+            </StackLayout>
         </VerticalStackLayout>
-
-
-        <Button Command="{Binding AddEmployeeCommand}" Text="Save Employee Details"/>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>

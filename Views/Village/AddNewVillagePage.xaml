@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Village.AddNewVillagePage"
+             Title="Add New Village">
+    <StackLayout Margin="10">
+        <VerticalStackLayout>
+            <Label Text="SubLocation Name" FontSize="16"/>
+            <Picker
+              x:Name="SubLocation"
+              ItemsSource="{Binding SubLocationList,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedSubLocation,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select SubLocation">
+            </Picker>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Village Code" FontSize="16"/>
+            <Entry Text="{Binding VillageDetails.Code}" Placeholder="Village Code"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Village Name" FontSize="16"/>
+            <Entry Text="{Binding VillageDetails.Name}" Placeholder="Village Name"/>
+        </VerticalStackLayout>
+        <Button Command="{Binding AddNewVillageCommand}" Text="Save Village"/>
+    </StackLayout>
+</ContentPage>

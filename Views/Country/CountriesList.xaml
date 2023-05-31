@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Country.CountriesList"
+             Title="Countries List">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Country" Command="{Binding AddNewCountryCommand}"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="15">
+        <SearchBar x:Name="Search"
+                   Text=""
+                   Placeholder="Search Country"
+                   FontSize="Small">
+        </SearchBar>
+        <Grid Margin="5,5,5,5" HeightRequest="30" RowDefinitions="Auto" ColumnDefinitions="50*,50*" BackgroundColor="Green">
+            <Label Text="Country Code" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Country Name" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+        <CollectionView ItemsSource="{Binding CountriesList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10,30,0,0" RowSpacing="4" RowDefinitions="Auto" ColumnDefinitions="50*,50*" VerticalOptions="FillAndExpand">
+                        <BoxView HeightRequest="0.1"  BackgroundColor="Black" Grid.ColumnSpan="5" VerticalOptions="Start"/>
+                        <Label Text="{Binding Code}" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="{Binding Name}" FontAttributes="Bold" Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net7.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EmployeeApp
+build_property.ProjectDir = D:\Macro Code\Projects\EmployeeApp\
+
+[D:/Macro Code/Projects/EmployeeApp/AccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.AccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AccountPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/AddEmployee.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.AddEmployee.xaml
+build_metadata.AdditionalFiles.TargetPath = AddEmployee.xaml
+build_metadata.AdditionalFiles.RelativePath = AddEmployee.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/DashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.DashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = DashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = DashboardPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/EmployeesList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.EmployeesList.xaml
+build_metadata.AdditionalFiles.TargetPath = EmployeesList.xaml
+build_metadata.AdditionalFiles.RelativePath = EmployeesList.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Constituencies/AddNewConstituencyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Constituencies.AddNewConstituencyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Constituencies\AddNewConstituencyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Constituencies\AddNewConstituencyPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Constituencies/ConstituencyList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Constituencies.ConstituencyList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Constituencies\ConstituencyList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Constituencies\ConstituencyList.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Country/AddNewCountryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Country.AddNewCountryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Country\AddNewCountryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Country\AddNewCountryPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Country/CountriesList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Country.CountriesList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Country\CountriesList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Country\CountriesList.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Locations/AddNewLocationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Locations.AddNewLocationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Locations\AddNewLocationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Locations\AddNewLocationPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Locations/LocationsList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Locations.LocationsList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Locations\LocationsList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Locations\LocationsList.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/SubLocations/AddNewSubLocationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.SubLocations.AddNewSubLocationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SubLocations\AddNewSubLocationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SubLocations\AddNewSubLocationPage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/SubLocations/SubLocationsList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.SubLocations.SubLocationsList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SubLocations\SubLocationsList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SubLocations\SubLocationsList.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Village/AddNewVillagePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Village.AddNewVillagePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Village\AddNewVillagePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Village\AddNewVillagePage.xaml
+
+[D:/Macro Code/Projects/EmployeeApp/Views/Village/VillageList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = EmployeeApp.Views.Village.VillageList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Village\VillageList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Village\VillageList.xaml

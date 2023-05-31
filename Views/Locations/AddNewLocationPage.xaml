@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Locations.AddNewLocationPage"
+             Title="Add New Location">
+    <StackLayout Margin="10">
+        <Label Text="Constituency Name" FontSize="16"/>
+        <Picker
+              x:Name="Constituencies"
+              ItemsSource="{Binding ConstituencyList,Mode=TwoWay}"
+              SelectedItem="{Binding SelectedConstituency,Mode=TwoWay}"
+              ItemDisplayBinding="{Binding Name}"
+              Title="Select Constituency">
+        </Picker>
+
+        <VerticalStackLayout>
+            <Label Text="Location Code" FontSize="16"/>
+            <Entry Text="{Binding LocationDetails.Code}" Placeholder="Location Code"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Location Name" FontSize="16"/>
+            <Entry Text="{Binding LocationDetails.LocationName}" Placeholder="Location Name"/>
+        </VerticalStackLayout>
+        <Button Command="{Binding AddNewLocationsCommand}" Text="Save Location"/>
+    </StackLayout>
+</ContentPage>

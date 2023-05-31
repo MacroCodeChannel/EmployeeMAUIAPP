@@ -5,6 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="Primary">#512BD4</Color>
+    <Color x:Key="NavigationBar">Green</Color>
+    <Color x:Key="EmployeeRed">Red</Color>
+    <Color x:Key="Color1">#564624</Color>
+    <Color x:Key="Color2">#806450</Color>
+    <Color x:Key="Color3">#016450</Color>
+    <Color x:Key="Color4">#340070</Color>
+    <Color x:Key="Color5">#566770</Color>
+    <Color x:Key="Color6">#590770</Color>
+    <Color x:Key="Color7">#120770</Color>
+    <Color x:Key="Color8">#900770</Color>
+    <Color x:Key="Color9">#159770</Color>
+    <Color x:Key="Color10">#659660</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>
     <Color x:Key="White">White</Color>

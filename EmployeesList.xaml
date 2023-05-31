@@ -4,32 +4,37 @@
              xmlns:viemodels ="clr-namespace:EmployeeApp.ViewModels"
              x:Class="EmployeeApp.EmployeesList"
              Title="Employees List">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Employee" Command="{Binding AddUpdateEmployeeCommand}"/>
+    </ContentPage.ToolbarItems>
     <StackLayout Margin="15">
-        <Label  Text="Employees List" FontSize="30"/>
-        <Button Text="Add Employee" Command="{Binding AddUpdateEmployeeCommand}" HorizontalOptions="EndAndExpand"/>
 
-        <CollectionView ItemsSource="{Binding Employees}">
+        <SearchBar x:Name="Search"
+                   Text=""
+                   Placeholder="Search Employee"
+                   FontSize="Small">
+        </SearchBar>
+        <Grid Margin="5,5,5,5" HeightRequest="30" RowDefinitions="Auto" ColumnDefinitions="30*,30*,30*,30*" BackgroundColor="Green">
+            <Label Text="First Name" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Middle Name" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Last Name" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="DOB" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3"/>
+        </Grid>
+        <CollectionView 
+            ItemsSource="{Binding Employees,Mode=TwoWay}"
+            SelectionMode="Single"
+            SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Margin="10" Padding="10">
-                        <StackLayout >
-                            <HorizontalStackLayout Spacing="5">
-                                <Label Text="{Binding FirstName}" FontSize="10" FontAttributes="Bold"/>
-                                <Label Text="{Binding MiddleName}" FontSize="10" FontAttributes="Bold"/>
-                                <Label Text="{Binding LastName}" FontSize="10" FontAttributes="Bold"/>
-                            </HorizontalStackLayout>
-                            <Label Text="{Binding EmailAddress}" FontSize="10" FontAttributes="Bold"/>
-                            <Label Text="{Binding DateOfBirth}" FontSize="10" FontAttributes="Bold"/>
-                        </StackLayout>
-
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viemodels:EmployeesViewModel}},Path=DisplayActionCommand}"
-                                                  CommandParameter="{Binding .}"/>
-                        </Frame.GestureRecognizers>
-                    </Frame>
+                    <Grid Margin="10,30,0,0" RowSpacing="4" RowDefinitions="Auto" ColumnDefinitions="30*,30*,30*,30*" VerticalOptions="FillAndExpand">
+                        <BoxView HeightRequest="0.1"  BackgroundColor="Black" Grid.ColumnSpan="5" VerticalOptions="Start"/>
+                        <Label Text="{Binding FirstName}" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"/>
+                        <Label Text="{Binding MiddleName}" FontAttributes="Bold" Grid.Row="1" Grid.Column="1"/>
+                        <Label Text="{Binding LastName}" FontAttributes="Bold" Grid.Row="1" Grid.Column="2"/>
+                        <Label Text="{Binding DateOfBirth}" FontAttributes="Bold" Grid.Row="1" Grid.Column="3"/>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    
     </StackLayout>
 </ContentPage>

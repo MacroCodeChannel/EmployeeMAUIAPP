@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Title="Login to Employee App">
+    
+    <VerticalStackLayout Margin="10" Spacing="10">
+        <VerticalStackLayout Padding="20" CompressedLayout.IsHeadless="True">
+            <Image x:Name="logo" HeightRequest="150" Source="dotnet_bot.png" />
+            <Label Text="Employee Mobile App" TextColor="{StaticResource Color4}" FontSize="25"/>
+        </VerticalStackLayout>
+        
+        <Label Text="Email Address"/>
+        <Entry
+            x:Name="Email"
+            IsSpellCheckEnabled="False"
+            Text="{Binding EmailAdress}"
+            Keyboard="Text"
+            Placeholder="Enter your Email Address"/>
+
+        <Label Text="Password"/>
+        <Entry
+            x:Name="Password"
+            IsPassword="True"
+            Text="{Binding Password}"
+           Keyboard="Numeric"
+            Placeholder="Enter your Password"/>
+        <VerticalStackLayout>
+            <ActivityIndicator HeightRequest="50" IsVisible="{Binding IsRunning}" IsRunning="{Binding IsRunning}"/>
+            <Button 
+                x:Name="Signin"
+                Command="{Binding LoginCommand}"
+                Text="Sign in"
+                HeightRequest="40"
+                CornerRadius="20"/>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Country.AddNewCountryPage"
+             Title="Add New Country">
+        <StackLayout Margin="10">
+            <VerticalStackLayout>
+                <Label Text="Country Code" FontSize="16"/>
+                <Entry Text="{Binding CountryDetails.Code}" Placeholder="Country Code"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Label Text="Country Name" FontSize="16"/>
+            <Entry Text="{Binding CountryDetails.Name}" Placeholder="Country Name"/>
+            </VerticalStackLayout>
+            <Button Command="{Binding AddNewCountryCommand}" Text="Save Country"/>
+        </StackLayout>
+</ContentPage>

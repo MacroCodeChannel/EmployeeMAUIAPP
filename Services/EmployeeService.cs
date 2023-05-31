@@ -1,4 +1,4 @@
-﻿using EmployeeApp.Models;
+﻿using EmployeeApp.DbContext;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace EmployeeApp.Services
         {
             if (_dbConnection == null)
             {
-                string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Employee.db3");
+                string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "MainDatabase.db3");
                 _dbConnection = new SQLiteAsyncConnection(dbPath);
                 await _dbConnection.CreateTableAsync<Employee>();
             }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeApp.Views.Village.VillageList">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Village" Command="{Binding AddNewVillageCommand}"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="15">
+        <CollectionView ItemsSource="{Binding VillageList,Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="10" Padding="10">
+                        <StackLayout >
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="{Binding Code}" FontSize="10" FontAttributes="Bold"/>
+                                <Label Text="{Binding Name}" FontSize="10" FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
